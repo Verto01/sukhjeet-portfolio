@@ -40,7 +40,7 @@ if (projectDeck) {
       mark: 'ƒ(x)',
       visualTitle: 'retry strategy',
       visualDetail: 'exponential backoff',
-      visual: '<svg viewBox="0 0 76 30" role="presentation"><path d="M2 26 C19 25 26 23 36 19 S53 11 73 3"/><circle cx="73" cy="3" r="2.5"/></svg>',
+      visual: '<svg viewBox="0 0 104 36" role="presentation"><path d="M6 31H98M8 29C28 29 39 27 53 22S77 12 95 4"/><circle cx="95" cy="4" r="2.8"/></svg>',
     },
     {
       filename: 'grocery.recommendations.js',
@@ -61,7 +61,7 @@ if (projectDeck) {
       mark: 'AI →',
       visualTitle: 'recommendation flow',
       visualDetail: 'plan · suggest · shop',
-      visual: '<svg viewBox="0 0 76 30" role="presentation"><path d="M8 15H68M27 7l8 8-8 8M48 7l8 8-8 8"/><circle cx="8" cy="15" r="3"/><circle cx="38" cy="15" r="3"/><circle cx="68" cy="15" r="3"/></svg>',
+      visual: '<svg viewBox="0 0 104 36" role="presentation"><path d="M14 18H33M29 14l5 4-5 4M58 18H77M73 14l5 4-5 4"/><circle cx="8" cy="18" r="6"/><circle cx="52" cy="18" r="6"/><circle cx="96" cy="18" r="6"/></svg>',
     },
     {
       filename: 'rb.constructions.portal.js',
@@ -82,7 +82,7 @@ if (projectDeck) {
       mark: '↗',
       visualTitle: 'business workflow',
       visualDetail: 'book · track · notify',
-      visual: '<svg viewBox="0 0 76 30" role="presentation"><path d="M10 15H66M27 7l8 8-8 8M47 7l8 8-8 8"/><rect x="2" y="8" width="14" height="14" rx="3"/><rect x="32" y="8" width="14" height="14" rx="3"/><rect x="62" y="8" width="12" height="14" rx="3"/></svg>',
+      visual: '<svg viewBox="0 0 104 36" role="presentation"><path d="M15 18H32M28 14l5 4-5 4M59 18H76M72 14l5 4-5 4"/><rect x="1" y="8" width="14" height="20" rx="3"/><rect x="45" y="8" width="14" height="20" rx="3"/><rect x="89" y="8" width="14" height="20" rx="3"/></svg>',
     },
   ];
 
