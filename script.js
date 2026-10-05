@@ -1,4 +1,4 @@
-const menuButton = document.querySelector('.menu-toggle');
+﻿const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
 const profileTrigger = document.querySelector('.profile-trigger');
 const profileDialog = document.querySelector('#profile-dialog');
@@ -189,3 +189,20 @@ document.querySelector('[data-copy-email]').addEventListener('click', async (eve
   }
   window.setTimeout(() => { button.textContent = originalLabel; }, 1600);
 });
+
+// Proof-panel entrance animation — IntersectionObserver, staggered, respects prefers-reduced-motion
+(function() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+  const rows = document.querySelectorAll('.proof-row');
+  if (!rows.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  rows.forEach((row) => observer.observe(row));
+})();
