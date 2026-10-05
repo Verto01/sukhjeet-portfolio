@@ -247,7 +247,7 @@ a.profile-link:hover{border-color:#AFC5F5;background:#F8FAFF}
 }
 
 /* Interactive project deck: all developer-visual styling is kept together here. */
-.hero-art{height:490px;position:relative;isolation:isolate;overflow:hidden;border:1px solid #D7E2F2;border-radius:15px;background:radial-gradient(ellipse at 50% 48%,#F8FBFF 5%,#EAF1FC 100%);box-shadow:0 18px 48px rgba(35,62,105,.07);transition:transform .3s ease,box-shadow .3s ease}
+.hero-art{height:490px;position:relative;isolation:isolate;overflow:hidden;border-radius:15px;background:radial-gradient(ellipse at 50% 48%,#F8FBFF 5%,#EAF1FC 100%);box-shadow:0 18px 48px rgba(35,62,105,.07);transition:transform .3s ease,box-shadow .3s ease}
 .hero-art::before{content:"";position:absolute;z-index:1;inset:3% 7%;pointer-events:none;background:radial-gradient(ellipse at 52% 51%,rgba(59,130,246,.25) 0%,rgba(96,165,250,.17) 34%,rgba(96,165,250,.07) 61%,transparent 78%);filter:blur(24px)}
 .hero-art:hover{transform:translateY(-2px);box-shadow:0 24px 58px rgba(35,62,105,.12)}
 .art-grid{position:absolute;z-index:0;inset:0;background-image:linear-gradient(rgba(17,24,39,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(17,24,39,.04) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(to bottom,black,transparent 98%);opacity:.62}
