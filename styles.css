@@ -3186,3 +3186,9 @@ a.profile-link:hover {
   .pn-section .pn-rail-node,
   .pn-section .pn-rail-marker { transition: none; }
 }
+
+.pn-section .pn-rail-node{transition:border-color 300ms ease,background-color 300ms ease}
+.pn-section .pn-rail-marker{transition:left 900ms cubic-bezier(.6,0,.2,1),background-color 400ms ease,box-shadow 400ms ease}
+.pn-section .pn-pause-btn{cursor:pointer}
+.pn-section .pn-pause-btn:focus-visible{outline:2px solid #2563EB;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.pn-section .pn-rail-node,.pn-section .pn-rail-marker{transition:none}}
