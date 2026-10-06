@@ -3460,3 +3460,189 @@ a.profile-link:hover {
     inset 0 0 0 1px rgba(6, 182, 212, .7),
     0 26px 48px -20px rgba(6, 182, 212, .7);
 }
+
+/* Personal note section */
+.pn-section {
+  position: relative;
+  isolation: isolate;
+  background: #F6F8FC;
+  border-top: 1px solid #DBE4F3;
+  padding: clamp(40px, 5vh, 56px) 0;
+  color: #334155;
+}
+.pn-section *,
+.pn-section *::before,
+.pn-section *::after { box-sizing: border-box; }
+
+/* ---------- Eyebrow (needs to be a direct child of .pn-container, above .pn-top-row) ---------- */
+.pn-section .pn-eyebrow-container { display: flex; align-items: center; gap: 12px; }
+.pn-section .pn-eyebrow-dot {
+  flex: none; width: 8px; height: 8px; border-radius: 50%;
+  background: #2563EB; box-shadow: 0 0 0 4px #EAF1FF;
+}
+.pn-section .pn-eyebrow {
+  margin: 0; white-space: nowrap; text-transform: uppercase;
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 15px; font-weight: 700; line-height: 1.2; letter-spacing: .16em; color: #0F172A;
+}
+.pn-section .pn-eyebrow-line { flex: 1; height: 1px; background: #DBE4F3; }
+
+/* ---------- Top row ---------- */
+.pn-section .pn-top-row {
+  display: grid; grid-template-columns: 7fr 6fr; gap: 48px;
+  align-items: end; margin-top: 28px;
+}
+.pn-section .pn-top-left,
+.pn-section .pn-top-right { min-width: 0; }
+
+.pn-section .pn-headline {
+  margin: 0; max-width: none;
+  font-size: clamp(44px, 5.4vw, 76px); font-weight: 700;
+  line-height: 1.02; letter-spacing: -.035em;
+}
+.pn-section .pn-headline span { display: block; }
+.pn-section .pn-headline-dark { color: #0F172A; }
+.pn-section .pn-headline-blue { color: #2563EB; }
+
+.pn-section .pn-top-right { display: flex; flex-direction: column; gap: 28px; }
+.pn-section .pn-paragraph {
+  margin: 0; max-width: 56ch;
+  font-size: 20px; line-height: 1.75; font-weight: 400; color: #334155;
+}
+.pn-section .pn-quote {
+  margin: 0; padding: 4px 0 4px 22px; border-left: 3px solid #2563EB;
+  font-size: 21px; line-height: 1.7; font-style: italic; font-weight: 500; color: #0F172A;
+}
+
+/* ---------- Stage ---------- */
+.pn-section .pn-stage { margin-top: 64px; }
+.pn-section .pn-toolbar { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+.pn-section .pn-pause-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0; border-radius: 50%;
+  border: 1px solid #DBE4F3; background: #fff; color: #0F172A; cursor: pointer;
+}
+.pn-section .pn-pause-btn svg rect { fill: currentColor; }
+
+/* ---------- Cards ---------- */
+/* margin/padding pair keeps layout identical but leaves room for hover lift + focus ring */
+.pn-section .pn-cards-row {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;
+  margin: -6px; padding: 6px;
+}
+.pn-section .pn-card {
+  -webkit-appearance: none; appearance: none;
+  display: flex; flex-direction: column; align-items: stretch;
+  position: relative; overflow: hidden; margin: 0; padding: 0 0 24px; min-height: 340px;
+  text-align: left; font: inherit; color: inherit; cursor: pointer;
+  background: var(--surface); border: 1.5px solid var(--border); border-radius: 20px;
+  transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+.pn-section .pn-card:hover,
+.pn-section .pn-card.on {
+  border-color: var(--hover);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px -18px rgba(15, 23, 42, .35);
+  box-shadow: 0 18px 32px -18px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.pn-section .pn-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.pn-section .pn-card-strip { flex: none; height: 5px; background: var(--accent); }
+
+.pn-section .pn-card-window {
+  position: relative; flex: none; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  height: 112px; margin: 18px 22px 22px; border-radius: 14px;
+  color: var(--accent); background-color: var(--window);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+  border: 1px solid var(--border);
+}
+.pn-section .pn-card-badge {
+  position: absolute; top: 8px; left: 8px;
+  display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 13px; font-weight: 700; line-height: 1;
+}
+.pn-section .pn-card-illustration { display: block; flex: none; width: 150px; height: 72px; }
+
+.pn-section .pn-card-label {
+  display: block; margin: 0; padding: 0 22px; text-transform: uppercase;
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 13px; font-weight: 700; line-height: 1.3; letter-spacing: .08em; color: var(--label);
+}
+.pn-section .pn-card-title {
+  margin: 10px 22px 8px; font-size: 24px; line-height: 1.25; font-weight: 700;
+  letter-spacing: -.015em; color: var(--title);
+}
+.pn-section .pn-card-body {
+  margin: 0 22px 20px; font-size: 16.5px; line-height: 1.6; font-weight: 500; color: var(--body);
+}
+.pn-section .pn-card-tag {
+  align-self: flex-start; margin: auto 22px 0; padding: 8px 12px; border-radius: 999px;
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+  font-size: 13px; font-weight: 700; line-height: 1.3;
+  background: var(--chip); color: var(--tag); border: 1px solid var(--border);
+}
+
+/* ---------- Rail (centres match real card centres: gap 24px => offsets -9/-3/+3/+9px) ---------- */
+.pn-section .pn-rail { position: relative; height: 34px; margin-top: 28px; }
+.pn-section .pn-rail-line {
+  position: absolute; top: 16px; height: 2px; background: #DBE4F3;
+  left: calc(12.5% - 9px); right: calc(12.5% - 9px);
+}
+.pn-section .pn-rail-nodes { position: absolute; inset: 0; }
+.pn-section .pn-rail-node {
+  position: absolute; top: 9px; flex: none; width: 16px; height: 16px; aspect-ratio: 1;
+  border-radius: 50%; background: #fff; border: 2px solid #DBE4F3;
+  transform: translateX(-50%); transition: background 400ms, border-color 400ms;
+}
+.pn-section .pn-rail-node.node-1 { left: calc(12.5% - 9px); --c: #0284C7; }
+.pn-section .pn-rail-node.node-2 { left: calc(37.5% - 3px); --c: #4F46E5; }
+.pn-section .pn-rail-node.node-3 { left: calc(62.5% + 3px); --c: #0F766E; }
+.pn-section .pn-rail-node.node-4 { left: calc(87.5% + 9px); --c: #7C3AED; }
+.pn-section .pn-rail-node.reached { border-color: var(--c); }
+.pn-section .pn-rail-node.on { border-color: var(--c); background: var(--c); }
+.pn-section .pn-rail-marker {
+  position: absolute; z-index: 2; top: 6px; left: calc(12.5% - 9px);
+  flex: none; width: 22px; height: 22px; aspect-ratio: 1; border-radius: 50%;
+  background: #0284C7; box-shadow: 0 0 0 8px rgba(2, 132, 199, .2);
+  transform: translateX(-50%);
+  transition: left 900ms cubic-bezier(.6, 0, .2, 1), background 400ms;
+}
+
+/* ---------- Loop ---------- */
+.pn-section .pn-loop { margin-top: 4px; }
+.pn-section .pn-loop-svg { display: block; width: calc(100% + 24px); margin-left: -12px; height: auto; overflow: visible; }
+.pn-section .pn-loop-svg path:nth-of-type(2) {
+  fill: none; stroke: #0284C7; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.pn-section .pn-loop-label {
+  margin: 6px 0 0; text-align: center;
+  font-family: Inter, var(--font-body, system-ui), sans-serif;
+  font-size: 16px; font-weight: 500; line-height: 1.4; color: #334155;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .pn-section .pn-top-row { grid-template-columns: 1fr; gap: 28px; align-items: start; }
+  .pn-section .pn-cards-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pn-section .pn-toolbar,
+  .pn-section .pn-rail,
+  .pn-section .pn-loop { display: none; }
+}
+@media (max-width: 520px) {
+  .pn-section .pn-cards-row { grid-template-columns: 1fr; }
+  .pn-section .pn-card { min-height: auto; }
+  .pn-section .pn-paragraph { font-size: 18px; }
+  .pn-section .pn-quote { font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pn-section .pn-card,
+  .pn-section .pn-rail-node,
+  .pn-section .pn-rail-marker { transition: none; }
+}

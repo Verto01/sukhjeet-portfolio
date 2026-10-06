@@ -140,46 +140,39 @@
       </div>
     </section>
 
-    <section class="intro-band" id="personal-note">
-      <div class="section-wrap">
-        <div class="journey-top-row">
-          <p class="eyebrow"><span class="eyebrow-dot"></span>A PERSONAL NOTE</p>
-          <div class="journey-top-left">
-            <h2 class="brand-statement">I don&#8217;t just learn technologies.<br /><span>I build with them.</span></h2>
+    <section class="pn-section" id="personal-note">
+      <div class="section-wrap pn-container">
+        <div class="pn-top-row">
+          <div class="pn-top-left">
+            <div class="pn-eyebrow-container">
+              <span class="pn-eyebrow-dot"></span>
+              <p class="pn-eyebrow">A PERSONAL NOTE</p>
+              <div class="pn-eyebrow-line"></div>
+            </div>
+            <h2 class="pn-headline">
+              <span class="pn-headline-dark">I don't just learn<br>technologies.</span>
+              <span class="pn-headline-blue">I build with them.</span>
+            </h2>
           </div>
-          <div class="journey-top-right">
-            <p class="brand-support">Turning ideas into full-stack products, reliable backend systems, and the
-              engineering skills to build software that can stand up to the real world.</p>
-            <blockquote class="journey-quote">I started building because I enjoy the entire journey: from creating
-              engaging experiences, to connecting them to a working backend, to deploying them and seeing how people
-              actually respond.</blockquote>
+          <div class="pn-top-right">
+            <p class="pn-paragraph">Turning ideas into full-stack products, reliable backend systems, and the engineering skills to build software that can stand up to the real world.</p>
+            <blockquote class="pn-quote">I started building because I enjoy the entire journey: from creating engaging experiences, to connecting them to a working backend, to deploying them and seeing how people actually respond.</blockquote>
           </div>
         </div>
 
-        <div class="journey-stage">
-          <div class="journey-cards-container">
-            <button class="journey-pause-play" type="button" aria-label="Pause auto-cycle">
-              <span class="pause-icon" aria-hidden="true">⏸</span>
-              <span class="play-icon" aria-hidden="true" style="display:none;">▶</span>
+        <div class="pn-stage">
+          <div class="pn-toolbar">
+            <button type="button" class="pn-pause-btn" aria-label="Pause journey animation" inert>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
             </button>
+          </div>
 
-            <div class="journey-cards" role="tablist" aria-label="Journey steps">
-              <div class="journey-card-orb journey-card-orb-0" aria-hidden="true"></div>
-              <div class="journey-card-orb journey-card-orb-1" aria-hidden="true"></div>
-              <div class="journey-card-orb journey-card-orb-2" aria-hidden="true"></div>
-              <div class="journey-card-orb journey-card-orb-3" aria-hidden="true"></div>
-
-              <button class="journey-card" role="tab" aria-selected="true" aria-current="step"
-                aria-label="Step 1 of 4: Frontend" data-step="0"
-                style="--h: 6,182,212; --mid: #0e7490; --ink: #155e75;">
-                <div class="journey-card-content">
-                  <span class="journey-card-meta">STEP 1 · FRONTEND</span>
-                  <h3 class="journey-card-title">Shape the experience</h3>
-                  <p class="journey-card-text">Interfaces people actually want to use.</p>
-                  <span class="journey-card-tag">Smart Grocery List Generator</span>
-                </div>
-                <svg class="journey-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor"
-                  stroke-width="2" aria-hidden="true">
+          <div class="pn-cards-row">
+            <button type="button" class="pn-card on" aria-pressed="true" style="--surface: #E0F2FE; --border: #7DD3FC; --hover: #38BDF8; --chip: #BAE6FD; --window: #F0F9FF; --grid: #BAE6FD; --accent: #0284C7; --label: #075985; --title: #082F49; --body: #0C4A6E; --tag: #075985;">
+              <div class="pn-card-strip"></div>
+              <div class="pn-card-window">
+                <div class="pn-card-badge">1</div>
+                <svg class="pn-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="14" y="8" width="132" height="60" rx="8" />
                   <path d="M14 22h132" />
                   <circle cx="25" cy="15" r="2" fill="currentColor" />
@@ -188,36 +181,36 @@
                   <rect x="26" y="46" width="44" height="6" rx="3" opacity=".5" />
                   <rect x="100" y="34" width="34" height="22" rx="6" fill="currentColor" />
                 </svg>
-              </button>
+              </div>
+              <span class="pn-card-label">STEP 1 · FRONTEND</span>
+              <h3 class="pn-card-title">Shape the experience</h3>
+              <p class="pn-card-body">Interfaces people actually want to use.</p>
+              <span class="pn-card-tag">Smart Grocery List Generator</span>
+            </button>
 
-              <button class="journey-card" role="tab" aria-selected="false" aria-label="Step 2 of 4: Backend"
-                data-step="1" style="--h: 16,185,129; --mid: #047857; --ink: #065f46;">
-                <div class="journey-card-content">
-                  <span class="journey-card-meta">STEP 2 · BACKEND</span>
-                  <h3 class="journey-card-title">Wire the backend</h3>
-                  <p class="journey-card-text">Logic and data that hold up when things fail.</p>
-                  <span class="journey-card-tag">Fault-Tolerant Webhook Dispatcher</span>
-                </div>
-                <svg class="journey-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor"
-                  stroke-width="2" aria-hidden="true">
+            <button type="button" class="pn-card" aria-pressed="false" style="--surface: #E0E7FF; --border: #A5B4FC; --hover: #818CF8; --chip: #C7D2FE; --window: #EEF2FF; --grid: #C7D2FE; --accent: #4F46E5; --label: #3730A3; --title: #1E1B4B; --body: #312E81; --tag: #312E81;">
+              <div class="pn-card-strip"></div>
+              <div class="pn-card-window">
+                <div class="pn-card-badge">2</div>
+                <svg class="pn-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="10" y="26" width="34" height="24" rx="6" />
                   <rect x="63" y="8" width="34" height="24" rx="6" fill="currentColor" opacity=".2" />
                   <rect x="63" y="44" width="34" height="24" rx="6" />
                   <rect x="116" y="26" width="34" height="24" rx="6" />
                   <path d="M44 38h10l9-18M44 38h10l9 18M97 20l10 18h9M97 56l10-18" />
                 </svg>
-              </button>
+              </div>
+              <span class="pn-card-label">STEP 2 · BACKEND</span>
+              <h3 class="pn-card-title">Wire the backend</h3>
+              <p class="pn-card-body">Logic and data that hold up when things fail.</p>
+              <span class="pn-card-tag">Fault-Tolerant Webhook Dispatcher</span>
+            </button>
 
-              <button class="journey-card" role="tab" aria-selected="false" aria-label="Step 3 of 4: Deployment"
-                data-step="2" style="--h: 245,158,11; --mid: #b45309; --ink: #92400e;">
-                <div class="journey-card-content">
-                  <span class="journey-card-meta">STEP 3 · DEPLOYMENT</span>
-                  <h3 class="journey-card-title">Ship it</h3>
-                  <p class="journey-card-text">Live on real infrastructure, not just localhost.</p>
-                  <span class="journey-card-tag">Deployed on AWS EC2</span>
-                </div>
-                <svg class="journey-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor"
-                  stroke-width="2" aria-hidden="true">
+            <button type="button" class="pn-card" aria-pressed="false" style="--surface: #CCFBF1; --border: #5EEAD4; --hover: #2DD4BF; --chip: #99F6E4; --window: #F0FDFA; --grid: #99F6E4; --accent: #0F766E; --label: #115E59; --title: #042F2E; --body: #134E4A; --tag: #134E4A;">
+              <div class="pn-card-strip"></div>
+              <div class="pn-card-window">
+                <div class="pn-card-badge">3</div>
+                <svg class="pn-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="36" y="10" width="88" height="16" rx="5" />
                   <rect x="36" y="30" width="88" height="16" rx="5" />
                   <rect x="36" y="50" width="88" height="16" rx="5" fill="currentColor" opacity=".2" />
@@ -226,59 +219,59 @@
                   <circle cx="48" cy="58" r="2.5" fill="currentColor" />
                   <path d="M140 52V20m-7 7 7-8 7 8" />
                 </svg>
-              </button>
+              </div>
+              <span class="pn-card-label">STEP 3 · DEPLOYMENT</span>
+              <h3 class="pn-card-title">Ship it</h3>
+              <p class="pn-card-body">Live on real infrastructure, not just localhost.</p>
+              <span class="pn-card-tag">Deployed on AWS EC2</span>
+            </button>
 
-              <button class="journey-card" role="tab" aria-selected="false" aria-label="Step 4 of 4: Real users"
-                data-step="3" style="--h: 244,63,94; --mid: #be123c; --ink: #9f1239;">
-                <div class="journey-card-content">
-                  <span class="journey-card-meta">STEP 4 · REAL USERS</span>
-                  <h3 class="journey-card-title">Watch what people do</h3>
-                  <p class="journey-card-text">Real users, real feedback, real lessons.</p>
-                  <span class="journey-card-tag">R B Constructions</span>
-                </div>
-                <svg class="journey-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor"
-                  stroke-width="2" aria-hidden="true">
+            <button type="button" class="pn-card" aria-pressed="false" style="--surface: #EDE9FE; --border: #C4B5FD; --hover: #A78BFA; --chip: #DDD6FE; --window: #F5F3FF; --grid: #DDD6FE; --accent: #7C3AED; --label: #5B21B6; --title: #2E1065; --body: #4C1D95; --tag: #4C1D95;">
+              <div class="pn-card-strip"></div>
+              <div class="pn-card-window">
+                <div class="pn-card-badge">4</div>
+                <svg class="pn-card-illustration" viewBox="0 0 160 76" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <circle cx="30" cy="48" r="7" />
                   <path d="M18 68c0-8 6-12 12-12s12 4 12 12" />
                   <circle cx="62" cy="48" r="7" fill="currentColor" opacity=".25" />
                   <path d="M50 68c0-8 6-12 12-12s12 4 12 12" />
                   <path d="M92 62l16-10 12 6 24-34m-9 1h9v9" />
                 </svg>
-              </button>
-            </div>
+              </div>
+              <span class="pn-card-label">STEP 4 · REAL USERS</span>
+              <h3 class="pn-card-title">Watch what people do</h3>
+              <p class="pn-card-body">Real users, real feedback, real lessons.</p>
+              <span class="pn-card-tag">R B Constructions</span>
+            </button>
           </div>
 
-          <div class="journey-rail" aria-hidden="true">
-            <div class="journey-rail-track"></div>
-            <div class="journey-rail-nodes">
-              <div class="journey-rail-node" data-step="0"></div>
-              <div class="journey-rail-node" data-step="1"></div>
-              <div class="journey-rail-node" data-step="2"></div>
-              <div class="journey-rail-node" data-step="3"></div>
+          <div class="pn-rail" aria-hidden="true">
+            <div class="pn-rail-line"></div>
+            <div class="pn-rail-nodes">
+              <div class="pn-rail-node node-1 on"></div>
+              <div class="pn-rail-node node-2"></div>
+              <div class="pn-rail-node node-3"></div>
+              <div class="pn-rail-node node-4"></div>
             </div>
-            <div class="journey-rail-marker" data-position="0">
-              <div class="journey-rail-marker-core"></div>
-              <div class="journey-rail-marker-halo"></div>
-            </div>
+            <div class="pn-rail-marker"></div>
           </div>
 
-          <svg class="journey-feedback-loop" aria-hidden="true" viewBox="0 0 1000 64" role="img">
-            <title>Feedback loops back to the first step</title>
-            <defs>
-              <linearGradient id="feedback-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#be123c" stop-opacity="0.6" />
-                <stop offset="33%" stop-color="#b45309" stop-opacity="0.6" />
-                <stop offset="66%" stop-color="#047857" stop-opacity="0.6" />
-                <stop offset="100%" stop-color="#0e7490" stop-opacity="0.6" />
-              </linearGradient>
-            </defs>
-            <path d="M875 4C875 54 800 58 700 58H300C200 58 125 54 125 12" fill="none" stroke="url(#feedback-gradient)"
-              stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" />
-            <path d="M118 20l7-9 7 9" fill="url(#feedback-gradient)" stroke="none" />
-            <text x="500" y="45" text-anchor="middle" fill="#667085" font-size="14" font-family="Inter, sans-serif">
-              Then listen, improve, and go around again.
-            </text>
-          </svg>
+          <div class="pn-loop" aria-hidden="true">
+            <svg class="pn-loop-svg" viewBox="0 0 1000 64" role="img">
+              <title>Feedback loops back to the first step</title>
+              <defs>
+                <linearGradient id="pn-loop-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#0284C7" />
+                  <stop offset="33%" stop-color="#0F766E" />
+                  <stop offset="66%" stop-color="#4F46E5" />
+                  <stop offset="100%" stop-color="#7C3AED" />
+                </linearGradient>
+              </defs>
+              <path d="M875 4C875 54 800 58 700 58H300C200 58 125 54 125 12" fill="none" stroke="url(#pn-loop-gradient)" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" />
+              <path d="M118 20l7-9 7 9" fill="url(#pn-loop-gradient)" stroke="none" />
+            </svg>
+            <p class="pn-loop-label">Then listen, improve, and go around again.</p>
+          </div>
         </div>
       </div>
     </section>
