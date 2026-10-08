@@ -3368,3 +3368,14 @@ a.profile-link:hover {
   #about .ab-stats{grid-template-columns:1fr}
   #about .ab-stats .ab-stat-projects{grid-column:auto}
 }
+
+/* ===== About · label pill ===== */
+#about .ab-eyebrow{display:inline-flex;align-items:center;gap:14px;margin:0;padding:11px 26px 11px 12px;font-family:var(--mono);font-size:20px;font-weight:700;line-height:1;letter-spacing:.14em;text-transform:uppercase;color:#0F172A;white-space:nowrap;border:1.5px solid transparent;border-radius:999px;background:linear-gradient(#FFFFFF,#FFFFFF) padding-box,linear-gradient(90deg,#0EA5E9 0%,#4F46E5 55%,#7C3AED 100%) border-box;box-shadow:0 10px 24px -14px rgba(79,70,229,.45)}
+#about .ab-eyebrow-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#2563EB;color:#FFFFFF;font-size:13px;letter-spacing:.04em}
+#about .ab-eyebrow-line{position:relative;flex:1;height:1px;background:#DBE4F3}
+#about .ab-eyebrow-line::before{content:"";position:absolute;left:0;top:50%;width:150px;max-width:40%;height:2px;transform:translateY(-50%);border-radius:2px;background:linear-gradient(90deg,#0EA5E9,#4F46E5 55%,#7C3AED)}
+#about .ab-eyebrow-line::after{content:"";position:absolute;right:0;top:50%;width:7px;height:7px;transform:translateY(-50%);border-radius:50%;background:#FFFFFF;border:1.5px solid #BFD2FA}
+@media (max-width:520px){
+  #about .ab-eyebrow{font-size:16px;letter-spacing:.12em;padding:9px 18px 9px 10px}
+  #about .ab-eyebrow-num{width:26px;height:26px;font-size:12px}
+}
