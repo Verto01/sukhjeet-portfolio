@@ -3379,3 +3379,29 @@ a.profile-link:hover {
   #about .ab-eyebrow{font-size:16px;letter-spacing:.12em;padding:9px 18px 9px 10px}
   #about .ab-eyebrow-num{width:26px;height:26px;font-size:12px}
 }
+
+/* ===== About · stat cards ===== */
+#about .ab-stat{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:14px;padding:26px 22px 22px;border-radius:20px;border:1.5px solid var(--border);background:var(--surface);color:var(--title);transition:transform 250ms ease,border-color 250ms ease,box-shadow 250ms ease}
+#about .ab-stat::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--accent)}
+#about .ab-stat:hover{transform:translateY(-4px);border-color:var(--hover);box-shadow:0 16px 30px -18px var(--accent)}
+#about .ab-stat-num{margin:0;font-size:clamp(40px,3.8vw,56px);font-weight:700;line-height:1;letter-spacing:-.03em;color:var(--title)}
+#about .ab-stat-label{margin:0;font-family:var(--mono);font-size:13px;font-weight:600;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--label)}
+#about .ab-stat-icon{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:14px;background:#FFFFFF;border:1px solid var(--border);color:var(--accent)}
+#about .ab-stat-icon svg{width:24px;height:24px}
+#about .ab-stat-cgpa{align-items:center;text-align:center}
+#about .ab-ring{position:relative;width:132px;height:132px;margin:0 auto}
+#about .ab-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+#about .ab-ring circle{fill:none;stroke-width:10;stroke-linecap:round}
+#about .ab-ring-track{stroke:#FFFFFF}
+#about .ab-ring-fill{stroke:var(--accent);stroke-dasharray:100;stroke-dashoffset:var(--off,19.9);transition:stroke-dashoffset 1200ms cubic-bezier(.2,.7,.2,1)}
+#about .ab-ring-num{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+#about .ab-ring-num b{font-size:32px;font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--title)}
+#about .ab-ring-num i{font-family:var(--mono);font-size:13px;font-weight:600;font-style:normal;line-height:1.2;color:var(--label)}
+#about .ab-proj-top{display:flex;gap:40px;flex-wrap:wrap}
+#about .ab-dots{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+#about .ab-dot{width:26px;height:26px;border-radius:8px;background:#FFFFFF;border:1.5px solid var(--border);transition:opacity 300ms ease,transform 300ms ease;transition-delay:calc(var(--i) * 60ms)}
+#about .ab-dot.is-live{background-color:var(--accent);border-color:var(--accent);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E");background-size:16px;background-position:center;background-repeat:no-repeat}
+#about .ab-legend{margin:0;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:600;line-height:1;color:var(--label)}
+#about .ab-key{width:12px;height:12px;border-radius:4px;background:#FFFFFF;border:1.5px solid var(--border);margin-left:6px}
+#about .ab-key.is-live{background:var(--accent);border-color:var(--accent);margin-left:0}
+@media (prefers-reduced-motion:reduce){#about .ab-stat,#about .ab-ring-fill,#about .ab-dot{transition:none}}
