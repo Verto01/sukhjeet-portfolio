@@ -140,7 +140,7 @@
       </div>
     </section>
 
-    <section class="pn-section" id="personal-note">
+    <section class="pn-section" id="personal-note" aria-labelledby="pn-headline">
       <div class="section-wrap pn-container">
         <div class="pn-eyebrow-container">
           <span class="pn-eyebrow-dot"></span>
@@ -149,7 +149,7 @@
         </div>
         <div class="pn-top-row">
           <div class="pn-top-left">
-            <h2 class="pn-headline">
+            <h2 class="pn-headline" id="pn-headline">
               <span class="pn-headline-dark">I don't just learn<br>technologies.</span>
               <span class="pn-headline-blue">I build with them.</span>
             </h2>
@@ -256,8 +256,8 @@
             <div class="pn-rail-marker"></div>
           </div>
 
-          <div class="pn-loop" aria-hidden="true">
-            <svg class="pn-loop-svg" viewBox="0 0 1000 64" role="img">
+          <div class="pn-loop">
+            <svg class="pn-loop-svg" viewBox="0 0 1000 64" aria-hidden="true" focusable="false">
               <title>Feedback loops back to the first step</title>
               <defs>
                 <linearGradient id="pn-loop-gradient" x1="0%" y1="0%" x2="100%" y2="0%">

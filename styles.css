@@ -3192,3 +3192,150 @@ a.profile-link:hover {
 .pn-section .pn-pause-btn{cursor:pointer}
 .pn-section .pn-pause-btn:focus-visible{outline:2px solid #2563EB;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.pn-section .pn-rail-node,.pn-section .pn-rail-marker{transition:none}}
+
+
+/* Personal Note: premium eyebrow + bigger loop label (v2, replaces the earlier override) */
+.pn-section .pn-eyebrow-container{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.pn-section .pn-eyebrow-container .pn-eyebrow-dot{
+  display:none;                       /* the dot now lives inside the pill */
+}
+.pn-section .pn-eyebrow-container .pn-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  margin:0;
+  padding:13px 26px 13px 20px;
+  font-size:20px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#0F172A;
+  white-space:nowrap;
+  border:1.5px solid transparent;
+  border-radius:999px;
+  background:
+    linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+    linear-gradient(90deg,#0EA5E9 0%,#4F46E5 55%,#7C3AED 100%) border-box;
+  box-shadow:0 10px 24px -14px rgba(79,70,229,.45), 0 1px 0 rgba(255,255,255,.9) inset;
+}
+.pn-section .pn-eyebrow-container .pn-eyebrow::before{
+  content:"";
+  flex:none;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0EA5E9,#7C3AED);
+  box-shadow:0 0 0 4px #EAF1FF;
+}
+.pn-section .pn-eyebrow-container .pn-eyebrow-line{
+  position:relative;
+  flex:1;
+  height:1px;
+  background:#DBE4F3;
+}
+.pn-section .pn-eyebrow-container .pn-eyebrow-line::before{   /* coloured accent segment */
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:150px;
+  max-width:40%;
+  height:2px;
+  transform:translateY(-50%);
+  border-radius:2px;
+  background:linear-gradient(90deg,#0EA5E9,#4F46E5 55%,#7C3AED);
+}
+.pn-section .pn-eyebrow-container .pn-eyebrow-line::after{    /* end dot */
+  content:"";
+  position:absolute;
+  right:0;
+  top:50%;
+  width:7px;
+  height:7px;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:#FFFFFF;
+  border:1.5px solid #BFD2FA;
+}
+
+.pn-section .pn-loop .pn-loop-label{
+  margin-top:12px;
+  font-size:22px;
+  line-height:1.35;
+  font-weight:600;
+  color:#1E293B;
+  letter-spacing:-.005em;
+}
+.pn-section .pn-loop .pn-loop-label::before{
+  content:"";
+  display:inline-block;
+  width:9px;
+  height:9px;
+  margin-right:12px;
+  vertical-align:middle;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0EA5E9,#7C3AED);
+}
+
+@media (max-width:1100px){
+  .pn-section .pn-loop .pn-loop-label{font-size:19px}
+}
+@media (max-width:520px){
+  .pn-section .pn-eyebrow-container{gap:14px}
+  .pn-section .pn-eyebrow-container .pn-eyebrow{
+    font-size:16px;
+    letter-spacing:.12em;
+    padding:10px 18px 10px 14px;
+  }
+}
+
+/* Personal Note accessibility and motion refinements */
+.pn-section .pn-headline {
+  display: grid;
+  gap: .22em;
+}
+
+.pn-section .pn-card {
+  transition: transform 250ms ease, border-color 250ms ease;
+}
+
+.pn-section .pn-rail-marker {
+  transition: left 900ms cubic-bezier(.6, 0, .2, 1), background-color 400ms ease;
+}
+
+.pn-section .pn-pause-btn:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 3px;
+}
+
+@media (forced-colors: active) {
+  .pn-section .pn-card,
+  .pn-section .pn-card-window,
+  .pn-section .pn-card-tag,
+  .pn-section .pn-pause-btn {
+    border-color: ButtonText;
+  }
+
+  .pn-section .pn-card:focus-visible,
+  .pn-section .pn-pause-btn:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 3px;
+  }
+
+  .pn-section .pn-rail-node {
+    border-color: ButtonText;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pn-section .pn-card,
+  .pn-section .pn-rail-node,
+  .pn-section .pn-rail-marker {
+    transition: none;
+  }
+}
